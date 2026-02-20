@@ -3,52 +3,628 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeightBuddy - Your Friendly Weight Loss Companion</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1A1A1A; background: #FFFBF7; }
-        .hero { text-align: center; padding: 80px 20px 60px; background: linear-gradient(135deg, #E8F5E9, #FFFBF7); }
-        .hero h1 { font-size: 48px; color: #4CAF50; margin-bottom: 16px; }
-        .hero p { font-size: 22px; color: #555; max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
-        .features { display: flex; flex-wrap: wrap; justify-content: center; gap: 32px; padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
-        .feature { flex: 1 1 280px; max-width: 300px; text-align: center; padding: 24px; }
-        .feature .icon { font-size: 48px; margin-bottom: 16px; }
-        .feature h3 { font-size: 24px; margin-bottom: 8px; color: #333; }
-        .feature p { font-size: 18px; color: #666; line-height: 1.5; }
-        .footer { text-align: center; padding: 40px 20px; background: #f5f5f5; }
-        .footer a { color: #4CAF50; text-decoration: none; font-size: 18px; margin: 0 16px; }
-        .footer a:hover { text-decoration: underline; }
-        .footer p { margin-top: 16px; font-size: 14px; color: #999; }
-    </style>
+    <title>WeightBuddy - Lose Weight by Simply Talking</title>
+    <meta name="description" content="WeightBuddy is the voice-first weight loss app designed for adults 50+. Say what you ate, track your exercise, and lose weight simply. Free for iPhone and Android.">
+    <meta name="keywords" content="weight loss app, calorie tracker, voice calorie tracker, weight loss for seniors, easy diet app, weight tracking, exercise tracker">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="WeightBuddy - Lose Weight by Simply Talking">
+    <meta property="og:description" content="The voice-first weight loss app designed for adults 50+. No tiny buttons, no confusing menus. Just talk.">
+    <meta property="og:url" content="https://weightbuddyapp.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WeightBuddy - Lose Weight by Simply Talking">
+    <meta name="twitter:description" content="Voice-first weight loss tracking for adults 50+.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="hero">
-        <h1>WeightBuddy</h1>
-        <p>Your friendly, voice-first weight loss companion. Talk, don't tap. Designed for simplicity.</p>
-    </div>
 
-    <div class="features">
-        <div class="feature">
-            <div class="icon">🎙️</div>
-            <h3>Voice First</h3>
-            <p>Just say what you ate or how you exercised. No complicated forms to fill out.</p>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">
+                <span class="nav-logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <circle cx="16" cy="16" r="16" fill="#4CAF50"/>
+                        <path d="M16 8c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2s2-.9 2-2v-6c0-1.1-.9-2-2-2zm4 8c0 2.21-1.79 4-4 4s-4-1.79-4-4h-2c0 2.76 2.12 5.03 4.83 5.42v2.58h2.34v-2.58C19.88 21.03 22 18.76 22 16h-2z" fill="white"/>
+                    </svg>
+                </span>
+                <span class="nav-logo-text">WeightBuddy</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#how-it-works">How It Works</a>
+                <a href="#features">Features</a>
+                <a href="#faq">FAQ</a>
+                <a href="#download" class="nav-cta">Download Free</a>
+            </div>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        <div class="feature">
-            <div class="icon">📊</div>
-            <h3>Track Progress</h3>
-            <p>See your calories, weight trends, and exercise at a glance.</p>
-        </div>
-        <div class="feature">
-            <div class="icon">💚</div>
-            <h3>Encouraging</h3>
-            <p>Friendly voice feedback that celebrates your progress and keeps you motivated.</p>
-        </div>
-    </div>
+    </nav>
 
-    <div class="footer">
-        <a href="/privacy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms of Service</a>
-        <p>&copy; 2026 WeightBuddy. All rights reserved.</p>
-    </div>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">Designed for adults 50+</span>
+                <h1 class="hero-title">Lose Weight by<br>Simply <span class="text-gradient">Talking</span></h1>
+                <p class="hero-subtitle">WeightBuddy listens when you say what you ate or how you exercised. No tiny buttons. No confusing menus. Just your voice.</p>
+                <div class="hero-ctas">
+                    <a href="#download" class="btn btn-primary btn-lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        Download for iPhone
+                    </a>
+                    <a href="#download" class="btn btn-secondary btn-lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83.52-1.28 1-1.5l10 10-10 10c-.48-.22-1-.67-1-1.5zm14.5-7.5L6 2.5l12 10.5zm0 0L6 23.5l11.5-10.5zM18 13l2.5-2L18 9v4z"/></svg>
+                        Download for Android
+                    </a>
+                </div>
+                <p class="hero-trust">Free to download. No credit card required.</p>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="phone-placeholder">
+                            <div class="phone-placeholder-header">
+                                <div class="ph-cal-card">
+                                    <span class="ph-cal-number">1,450</span>
+                                    <span class="ph-cal-label">calories left</span>
+                                </div>
+                            </div>
+                            <div class="phone-placeholder-cols">
+                                <div class="ph-col">
+                                    <div class="ph-col-title">Food</div>
+                                    <div class="ph-item">Eggs &amp; toast <span>+350</span></div>
+                                    <div class="ph-item">Chicken salad <span>+400</span></div>
+                                </div>
+                                <div class="ph-col">
+                                    <div class="ph-col-title">Exercise</div>
+                                    <div class="ph-item">Walking 30m <span>-150</span></div>
+                                </div>
+                            </div>
+                            <div class="phone-placeholder-mic">
+                                <div class="ph-mic-btn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm-1 7h2v-2.06c3.42-.36 6-3.28 6-6.81h-2c0 3.04-2.69 5.48-5.87 4.87-2.29-.44-4.08-2.33-4.4-4.64C7.37 15.15 9.43 13 12 13v-2c-3.73 0-6.68 3.22-5.97 7.06.46 2.46 2.41 4.43 4.97 4.88V21z"/></svg>
+                                </div>
+                                <span class="ph-mic-label">Press to speak</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOCIAL PROOF BAR ===== -->
+    <section class="social-proof">
+        <div class="container social-proof-container">
+            <div class="proof-item">
+                <span class="proof-number" data-count="1000">1,000+</span>
+                <span class="proof-label">Happy users</span>
+            </div>
+            <div class="proof-divider"></div>
+            <div class="proof-item">
+                <div class="proof-stars">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <span class="proof-label">4.8 average rating</span>
+            </div>
+            <div class="proof-divider"></div>
+            <div class="proof-item">
+                <span class="proof-number">100%</span>
+                <span class="proof-label">Free to use</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header" data-animate="fade-in-up">
+                <span class="section-label">Simple as 1-2-3</span>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">No learning curve. No setup headaches. Start tracking in under two minutes.</p>
+            </div>
+
+            <div class="steps">
+                <div class="step" data-animate="fade-in-up stagger-1">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="#4CAF50"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm-1 7h2v-2.06c3.42-.36 6-3.28 6-6.81h-2c0 3.04-2.69 5.48-5.87 4.87-2.29-.44-4.08-2.33-4.4-4.64C7.37 15.15 9.43 13 12 13v-2c-3.73 0-6.68 3.22-5.97 7.06.46 2.46 2.41 4.43 4.97 4.88V21z"/></svg>
+                    </div>
+                    <h3 class="step-title">Speak</h3>
+                    <p class="step-desc">Tap the big microphone button and say what you ate or how you exercised. That's it.</p>
+                    <div class="step-bubble">
+                        <span>"I had scrambled eggs and toast for breakfast"</span>
+                    </div>
+                </div>
+
+                <div class="step-connector">
+                    <svg width="60" height="24" viewBox="0 0 60 24"><path d="M0 12h55m-5-5l5 5-5 5" stroke="#4CAF50" stroke-width="2" fill="none" stroke-dasharray="4 4"/></svg>
+                </div>
+
+                <div class="step" data-animate="fade-in-up stagger-2">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="#4CAF50"><path d="M19 9l-7 7-7-7" stroke="#4CAF50" stroke-width="0" fill="#4CAF50"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#4CAF50"/></svg>
+                    </div>
+                    <h3 class="step-title">WeightBuddy Understands</h3>
+                    <p class="step-desc">Our smart technology figures out the calories instantly. No searching databases or measuring portions.</p>
+                    <div class="step-bubble step-bubble-reply">
+                        <span>"Got it! Scrambled eggs and toast &mdash; about 350 calories"</span>
+                    </div>
+                </div>
+
+                <div class="step-connector">
+                    <svg width="60" height="24" viewBox="0 0 60 24"><path d="M0 12h55m-5-5l5 5-5 5" stroke="#4CAF50" stroke-width="2" fill="none" stroke-dasharray="4 4"/></svg>
+                </div>
+
+                <div class="step" data-animate="fade-in-up stagger-3">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="#4CAF50"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>
+                    </div>
+                    <h3 class="step-title">Track Your Progress</h3>
+                    <p class="step-desc">Watch your weight trend downward. Get encouraging voice feedback on your journey.</p>
+                    <div class="step-bubble step-bubble-reply">
+                        <span>"You've lost 2 kilos this month. Brilliant work!"</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header" data-animate="fade-in-up">
+                <span class="section-label">Everything you need</span>
+                <h2 class="section-title">Features That Make It Easy</h2>
+                <p class="section-subtitle">Every feature was designed with one question in mind: "Would my mum find this simple?"</p>
+            </div>
+
+            <!-- Feature 1 -->
+            <div class="feature-row" data-animate="fade-in-up">
+                <div class="feature-text">
+                    <h3 class="feature-title">Just Talk. We'll Handle the Rest.</h3>
+                    <p class="feature-desc">No tiny text fields. No complicated food databases to scroll through. Simply press the big microphone button and speak naturally.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#4CAF50"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Works with natural language &mdash; speak however you like
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#4CAF50"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Supports food AND exercise in the same flow
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#4CAF50"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Big, easy-to-press button &mdash; no precision needed
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-phone">
+                        <div class="feature-phone-placeholder">
+                            <div class="fpp-icon">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="#4CAF50" opacity="0.3"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/></svg>
+                            </div>
+                            <span>Voice Input Screen</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-row feature-row-reverse" data-animate="fade-in-up">
+                <div class="feature-text">
+                    <h3 class="feature-title">Calories Counted Automatically</h3>
+                    <p class="feature-desc">Our smart technology understands your food and estimates calories instantly. No more guessing portion sizes or searching through endless lists.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#4CAF50"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Recognises thousands of foods automatically
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#4CAF50"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Sorts meals into breakfast, lunch, dinner, snacks
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#4CAF50"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Exercise calories credited back to your daily budget
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-phone">
+                        <div class="feature-phone-placeholder">
+                            <div class="fpp-icon">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="#4CAF50" opacity="0.3"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+                            </div>
+                            <span>Calorie Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-row" data-animate="fade-in-up">
+                <div class="feature-text">
+                    <h3 class="feature-title">See How Far You've Come</h3>
+                    <p class="feature-desc">Track your weight over time with a simple, clear progress view. See your starting weight, current weight, and goal &mdash; all at a glance.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#4CAF50"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Tap to log your weight &mdash; takes 5 seconds
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#4CAF50"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Visual progress bar towards your goal
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#4CAF50"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Weekly exercise summaries
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-phone">
+                        <div class="feature-phone-placeholder">
+                            <div class="fpp-icon">
+                                <svg width="64" height="64" viewBox="0 0 24 24" fill="#4CAF50" opacity="0.3"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>
+                            </div>
+                            <span>Progress Tracking</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="feature-row feature-row-reverse" data-animate="fade-in-up">
+                <div class="feature-text">
+                    <h3 class="feature-title">A Friendly Voice That Cheers You On</h3>
+                    <p class="feature-desc">WeightBuddy doesn't just track &mdash; it talks back. After every entry, you hear a warm, encouraging response. It's like having a supportive friend in your pocket.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#4CAF50"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Spoken confirmations after every entry
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#4CAF50"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Motivational progress summaries you can listen to
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#4CAF50"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Adjustable speaking speed (slow, normal, fast)
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="feature-visual-quotes">
+                        <div class="voice-bubble vb-1">"Got it! Chicken salad &mdash; about 400 calories. Nice healthy choice!"</div>
+                        <div class="voice-bubble vb-2">"You've lost 2 kilos this month. Brilliant work, keep it up!"</div>
+                        <div class="voice-bubble vb-3">"30-minute walk logged. That's 150 calories burned. Well done!"</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="feature-row" data-animate="fade-in-up">
+                <div class="feature-text">
+                    <h3 class="feature-title">Big Text. Big Buttons. No Confusion.</h3>
+                    <p class="feature-desc">We designed every screen for people who want simplicity. Large, readable text. Generous touch targets. Clear layouts. If you can use a phone to make a call, you can use WeightBuddy.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#4CAF50"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Minimum 22px text throughout the entire app
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#4CAF50"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Touch targets at least 60px &mdash; easy to tap
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#4CAF50"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                            Clean, uncluttered screens with obvious navigation
+                        </li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="accessibility-demo">
+                        <div class="ad-comparison">
+                            <div class="ad-bad">
+                                <span class="ad-label">Other apps</span>
+                                <div class="ad-text-small">Tiny text that's hard to read</div>
+                                <div class="ad-btn-small">Small button</div>
+                            </div>
+                            <div class="ad-good">
+                                <span class="ad-label">WeightBuddy</span>
+                                <div class="ad-text-large">Easy to read</div>
+                                <div class="ad-btn-large">Big, clear button</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHO IT'S FOR ===== -->
+    <section class="who-its-for" id="who">
+        <div class="container">
+            <div class="section-header" data-animate="fade-in-up">
+                <span class="section-label">Made with you in mind</span>
+                <h2 class="section-title">Built for You</h2>
+                <p class="section-subtitle">WeightBuddy was designed from day one for adults who want to lose weight without wrestling with complicated apps.</p>
+            </div>
+
+            <div class="persona-grid">
+                <div class="persona-card" data-animate="fade-in-up stagger-1">
+                    <div class="persona-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="#4CAF50"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    </div>
+                    <h3 class="persona-title">The Busy Grandparent</h3>
+                    <p class="persona-desc">You're active with the grandkids but want to get healthier. WeightBuddy fits into your day without slowing you down.</p>
+                </div>
+
+                <div class="persona-card" data-animate="fade-in-up stagger-2">
+                    <div class="persona-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="#4CAF50"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+                    </div>
+                    <h3 class="persona-title">The Walking Enthusiast</h3>
+                    <p class="persona-desc">You love your daily walk and want to see how those steps add up. Just say "walked 30 minutes" and it's logged.</p>
+                </div>
+
+                <div class="persona-card" data-animate="fade-in-up stagger-3">
+                    <div class="persona-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="#4CAF50"><path d="M20 15.31L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/></svg>
+                    </div>
+                    <h3 class="persona-title">The Fresh Starter</h3>
+                    <p class="persona-desc">Maybe you've tried other apps and given up because they were too complicated. WeightBuddy is the fresh start you need.</p>
+                </div>
+
+                <div class="persona-card" data-animate="fade-in-up stagger-4">
+                    <div class="persona-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="#4CAF50"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                    </div>
+                    <h3 class="persona-title">The Doctor's Orders</h3>
+                    <p class="persona-desc">Your GP said to lose some weight. WeightBuddy helps you track without stress and show real progress at your next visit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header" data-animate="fade-in-up">
+                <span class="section-label">Real stories</span>
+                <h2 class="section-title">What Our Users Say</h2>
+            </div>
+
+            <div class="carousel" id="carousel">
+                <div class="carousel-track">
+                    <div class="testimonial-card">
+                        <div class="tc-stars">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="tc-quote">"I've tried every diet app out there, and they all felt like homework. WeightBuddy just lets me talk. I love it."</p>
+                        <div class="tc-author">
+                            <div class="tc-avatar">M</div>
+                            <div class="tc-info">
+                                <span class="tc-name">Margaret, 62</span>
+                                <span class="tc-result">Lost 8kg</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="tc-stars">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="tc-quote">"The voice feedback is wonderful. It feels like someone is actually proud of me when I make good choices."</p>
+                        <div class="tc-author">
+                            <div class="tc-avatar">R</div>
+                            <div class="tc-info">
+                                <span class="tc-name">Robert, 58</span>
+                                <span class="tc-result">Lost 5kg</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="tc-stars">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="tc-quote">"My daughter set it up for me in two minutes. Now I use it every day. The big buttons are a godsend."</p>
+                        <div class="tc-author">
+                            <div class="tc-avatar">P</div>
+                            <div class="tc-info">
+                                <span class="tc-name">Patricia, 71</span>
+                                <span class="tc-result">Lost 6kg</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="tc-stars">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFC107"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <p class="tc-quote">"I just say what I ate after each meal. No typing, no searching. It's the first app I've stuck with longer than a week."</p>
+                        <div class="tc-author">
+                            <div class="tc-avatar">D</div>
+                            <div class="tc-info">
+                                <span class="tc-name">David, 55</span>
+                                <span class="tc-result">Lost 11kg</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header" data-animate="fade-in-up">
+                <span class="section-label">Questions answered</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-list" data-animate="fade-in-up">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Is WeightBuddy really free?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! WeightBuddy is free to download and use. All core features &mdash; voice logging, calorie tracking, exercise tracking, and weight progress &mdash; are included at no cost. We may introduce optional premium features in the future, but the core app will always be free.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How accurate are the calorie estimates?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our technology provides reasonable estimates rounded to the nearest 50 calories. They're designed to give you a helpful picture of your daily intake, not clinical precision. For most people trying to lose weight, this level of accuracy is exactly what you need.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Do I have to use my voice? Can I type instead?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! While voice is our recommended way (it's faster and easier), every screen has a text input option too. You can type anything you'd normally say.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Is my data private and secure?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. Your data is stored securely with row-level encryption &mdash; only you can access your information. Voice recordings are processed in real-time and never stored. Read our full <a href="/privacy.html">Privacy Policy</a> for details.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What exercises does it track?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Walking, running, cycling, swimming, yoga, gardening, housework, gym workouts, dancing, golf, and many more. Just tell WeightBuddy what you did and for how long &mdash; it handles the calorie calculation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Do I need to be tech-savvy to use this?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Not at all! If you can talk, you can use WeightBuddy. We designed it with large text, big buttons, and simple screens. Many of our users say it's the easiest app on their phone.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What phones does it work on?</span>
+                        <svg class="faq-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>WeightBuddy works on both iPhone (iOS 15+) and Android (version 10+). If your phone is from the last 5-6 years, you're all set.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FINAL CTA ===== -->
+    <section class="final-cta" id="download">
+        <div class="container final-cta-container">
+            <h2 class="final-cta-title" data-animate="fade-in-up">Start Your Journey Today</h2>
+            <p class="final-cta-subtitle" data-animate="fade-in-up">Download WeightBuddy and see how simple weight loss tracking can be. It takes just 2 minutes to set up.</p>
+            <div class="final-cta-buttons" data-animate="fade-in-up">
+                <a href="#" class="btn btn-white btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                    Download for iPhone
+                </a>
+                <a href="#" class="btn btn-outline-white btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83.52-1.28 1-1.5l10 10-10 10c-.48-.22-1-.67-1-1.5zm14.5-7.5L6 2.5l12 10.5zm0 0L6 23.5l11.5-10.5zM18 13l2.5-2L18 9v4z"/></svg>
+                    Download for Android
+                </a>
+            </div>
+            <p class="final-cta-note">Free. No credit card. No complicated setup.</p>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                        <circle cx="16" cy="16" r="16" fill="#4CAF50"/>
+                        <path d="M16 8c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2s2-.9 2-2v-6c0-1.1-.9-2-2-2zm4 8c0 2.21-1.79 4-4 4s-4-1.79-4-4h-2c0 2.76 2.12 5.03 4.83 5.42v2.58h2.34v-2.58C19.88 21.03 22 18.76 22 16h-2z" fill="white"/>
+                    </svg>
+                    <span>WeightBuddy</span>
+                </div>
+                <p class="footer-tagline">Your friendly weight loss companion.<br>Talk, don't tap.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <a href="mailto:support@weightbuddyapp.com">support@weightbuddyapp.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 WeightBuddy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
