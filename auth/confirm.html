@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Confirmed - WeightBuddy</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1A1A1A;
+            background: #FFFBF7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            padding: 32px 20px 24px;
+            background: #E8F5E9;
+        }
+        .header a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 24px 60px;
+        }
+
+        .confirm-card {
+            max-width: 520px;
+            width: 100%;
+            text-align: center;
+            background: #fff;
+            border-radius: 20px;
+            padding: 48px 32px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .checkmark-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #E8F5E9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+        }
+        .checkmark-circle svg {
+            width: 56px;
+            height: 56px;
+        }
+
+        .confirm-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2E7D32;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .confirm-message {
+            font-size: 22px;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 36px;
+        }
+
+        .open-app-btn {
+            display: inline-block;
+            background: #4CAF50;
+            color: #fff;
+            font-size: 22px;
+            font-weight: 600;
+            padding: 18px 48px;
+            border-radius: 14px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            min-height: 64px;
+            line-height: 1.3;
+        }
+        .open-app-btn:hover {
+            background: #43A047;
+        }
+        .open-app-btn:active {
+            background: #388E3C;
+        }
+
+        .hint-text {
+            font-size: 18px;
+            color: #888;
+            margin-top: 24px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 24px 20px;
+            color: #999;
+            font-size: 15px;
+            border-top: 1px solid #eee;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 24px 16px 20px;
+            }
+            .main {
+                padding: 24px 16px 40px;
+            }
+            .confirm-card {
+                padding: 36px 20px;
+                border-radius: 16px;
+            }
+            .checkmark-circle {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 20px;
+            }
+            .checkmark-circle svg {
+                width: 44px;
+                height: 44px;
+            }
+            .confirm-title {
+                font-size: 28px;
+            }
+            .confirm-message {
+                font-size: 20px;
+                margin-bottom: 28px;
+            }
+            .open-app-btn {
+                font-size: 20px;
+                padding: 16px 36px;
+                width: 100%;
+            }
+            .hint-text {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/">
+            <img src="/logo-40.png" alt="" width="40" height="40" style="border-radius: 8px; vertical-align: middle;">
+            WeightBuddy
+        </a>
+    </div>
+
+    <div class="main">
+        <div class="confirm-card">
+            <div class="checkmark-circle">
+                <svg viewBox="0 0 24 24" fill="#4CAF50">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+            </div>
+
+            <h1 class="confirm-title">Email Confirmed!</h1>
+
+            <p class="confirm-message">
+                Your email has been verified successfully. You can now go back to the WeightBuddy app and sign in.
+            </p>
+
+            <a href="#" class="open-app-btn" id="openAppBtn">Open WeightBuddy App</a>
+
+            <p class="hint-text">
+                If the button above does not open the app, simply open WeightBuddy on your phone and sign in with your email and password.
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 WeightBuddy. <a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a></p>
+    </div>
+</body>
+</html>
